@@ -5,15 +5,15 @@ const UseStateObject = () => {
 		name: "peter",
 		age: 24,
 		message: "random message",
-  });
-  // state values
-  const[name,setName] = useState('peter');
-   const [age, setAge] = useState(24);
-    const [message, setMessage] = useState("random message");
+	});
+	// state values
+	const [name, setName] = useState("peter");
+	const [age, setAge] = useState(24);
+	const [message, setMessage] = useState("random message");
 
 	const changeMessage = () => {
-    // setPerson({ ...person, message: "hello world" });
-    setMessage('hello world');
+		setPerson({ ...person, message: "hello world" });
+		// setMessage("hello world");
 	};
 	return (
 		<>
