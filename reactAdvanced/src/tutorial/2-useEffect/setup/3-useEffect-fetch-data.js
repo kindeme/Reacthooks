@@ -5,9 +5,9 @@ const url = "https://api.github.com/users";
 //second argument
 
 const UseEffectFetchData = () => {
-	const [users, setUsers] = setState([]);
+	const [users, setUsers] = useState([]);
 	const getUsers = async () => {
-		const response = await fatch(url);
+		const response = await fetch(url);
     const users = await response.json();
     setUsers(users)
 		//console.log(users);
@@ -18,7 +18,8 @@ const UseEffectFetchData = () => {
 	return (
 		<>
 			<h2>github users</h2>
-			<ul>{users.map((user) =>{
+			<ul className='users'>
+        {users.map((user) =>{
         const {id,login,avatar_url,html_url} = user;
         return(
           <li key ={id}>
